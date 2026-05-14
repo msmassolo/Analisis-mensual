@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P&amp;L Mensual 2026</title>
+<style>
+:root {
+  --bg:#f5f6f4; --surface:#fff; --text:#1d2328; --muted:#5d6770;
+  --border:#d8ddd9; --accent:#0e5f57; --accent-soft:#dcebe7;
+  --warn:#7a4500; --warn-soft:#fdf3e3; --warn-border:#e8c97a;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:Arial,Helvetica,sans-serif; font-size:14px; }
+header, main, footer { max-width:960px; margin:0 auto; padding:22px 18px; }
+header { border-bottom:1px solid var(--border); }
+.eyebrow { margin:0 0 6px; color:var(--accent); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+h1 { margin:0 0 10px; font-size:28px; line-height:1.1; }
+.deadline { display:inline-flex; padding:6px 11px; border:1px solid var(--warn-border); border-radius:6px; background:var(--warn-soft); color:var(--warn); font-size:12px; font-weight:700; }
+.section-label { margin:0 0 10px; color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+.steps { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:28px; }
+.step { border:1px solid var(--border); border-radius:8px; padding:14px; background:var(--surface); }
+.step-num { display:inline-block; width:22px; height:22px; line-height:22px; text-align:center; border-radius:50%; background:var(--accent-soft); color:var(--accent); font-size:11px; font-weight:700; margin-bottom:8px; }
+.step p { margin:0; color:var(--muted); font-size:13px; line-height:1.45; }
+.files-box { border:1px solid var(--border); border-radius:8px; background:var(--surface); overflow:hidden; }
+.tabs-bar { display:flex; flex-wrap:wrap; gap:6px; padding:12px 14px 0; border-bottom:1px solid var(--border); background:var(--bg); }
+.tab-btn { min-height:32px; padding:0 12px; border:1px solid var(--border); border-bottom:none; border-radius:6px 6px 0 0; background:var(--surface); color:var(--muted); font-weight:700; cursor:pointer; position:relative; bottom:-1px; }
+.tab-btn.active { color:var(--accent); border-bottom-color:var(--surface); }
+.area-panels { padding:20px 18px; }
+.area-panel { display:none; }
+.area-panel.active { display:block; }
+h2 { margin:0 0 12px; font-size:18px; }
+table { width:100%; border-collapse:collapse; }
+th { text-align:left; padding:0 12px 8px; color:var(--muted); font-size:11px; text-transform:uppercase; border-bottom:1px solid var(--border); }
+td { padding:12px; border-bottom:1px solid var(--border); }
+td:first-child { font-weight:700; }
+a { color:var(--accent); font-weight:700; }
+footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px solid var(--border); }
+@media (max-width:720px) { .steps { grid-template-columns:1fr 1fr; } h1 { font-size:22px; } }
+@media (max-width:480px) { .steps { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">P&amp;L Mensual</p>
+  <h1>Seguimiento Mensual P&amp;L — Ejercicio 2026/2027</h1>
+  <div class="deadline">Cada cierre mensual del ejercicio fiscal</div>
+</header>
+<main>
+  <p class="section-label">Instrucciones</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><p>Seleccioná tu área y abrí cada archivo del concepto.</p></div>
+    <div class="step"><div class="step-num">2</div><p>Completá las columnas amarillas (Real Año N) mes a mes.</p></div>
+    <div class="step"><div class="step-num">3</div><p>No modifiques Año N-1, PAO ni los nombres de las líneas.</p></div>
+    <div class="step"><div class="step-num">4</div><p>Los cambios se guardan automáticamente en Drive.</p></div>
+  </div>
+  <p class="section-label">Conceptos por área</p>
+  <div class="files-box">
+    <div class="tabs-bar" id="tabs"><button class="tab-btn" data-area="RM" onclick="mostrarArea('RM')">RM</button><button class="tab-btn" data-area="Costos" onclick="mostrarArea('Costos')">Costos</button><button class="tab-btn" data-area="Impuestos" onclick="mostrarArea('Impuestos')">Impuestos</button><button class="tab-btn" data-area="Produccion" onclick="mostrarArea('Produccion')">Produccion</button><button class="tab-btn" data-area="Logistica" onclick="mostrarArea('Logistica')">Logística</button></div>
+    <div class="area-panels" id="panels">
+            <section id="panel-RM" class="area-panel">
+              <h2>RM</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Volumen CC</td><td><a href="https://docs.google.com/spreadsheets/d/1Wf18dCdgbRHwhXLJk5m9tWd4N2Jszt4R/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Volumen CR</td><td><a href="https://docs.google.com/spreadsheets/d/198pb6_REew1GKcmwftd89J-_uc-T29om/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Venta Neta</td><td><a href="https://docs.google.com/spreadsheets/d/12L8JRGl-_StwpjNnlA7gUY0YEWpm5HQ8/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+              </table>
+            </section>
+            
+            <section id="panel-Costos" class="area-panel">
+              <h2>Costos</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Costo de Insumos y Packging</td><td><a href="https://docs.google.com/spreadsheets/d/1E6PuKnqK4EnTC5ZKSVwQ2yU9MjKUE3H7/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+              </table>
+            </section>
+            
+            <section id="panel-Impuestos" class="area-panel">
+              <h2>Impuestos</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Deudores Incobrables</td><td><a href="https://docs.google.com/spreadsheets/d/1KdldQSDVFZ9GaTtGlbRPPq5n83nOHJhX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C bancarios</td><td><a href="https://docs.google.com/spreadsheets/d/1f4L2hjp_0bVhIn-1X-DzhlClObK_SXwf/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><a href="https://docs.google.com/spreadsheets/d/1OtIH9PWuWrqFivOvhNPncDIWs1LPHhn6/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos brutos</td><td><a href="https://docs.google.com/spreadsheets/d/1a0vPAQ9DZjoo8cBFk8J57gBqzs6KNj2J/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><a href="https://docs.google.com/spreadsheets/d/1coUtahYeZeJMjKoF0mfw2qsxupGOsXcX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+              </table>
+            </section>
+            
+            <section id="panel-Produccion" class="area-panel">
+              <h2>Produccion</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Desvio Standard</td><td><a href="https://docs.google.com/spreadsheets/d/17Ie-aVdwd_rFIZ5fgG6h80VfA6bMuLQH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+              </table>
+            </section>
+            
+            <section id="panel-Logistica" class="area-panel">
+              <h2>Logística</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Acuerdos Logisticos</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Directa</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Distribucion</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Interplanta</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Pallets</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+              </table>
+            </section>
+            </div>
+  </div>
+</main>
+<footer>Consultas: <a href="mailto:Sebastian.Massolo@grupocepas.com">Sebastian.Massolo@grupocepas.com</a></footer>
+<script>
+function mostrarArea(id) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.area === id));
+  document.querySelectorAll('.area-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + id));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const first = document.querySelector('.tab-btn');
+  if (first) mostrarArea(first.dataset.area);
+});
+</script>
+</body>
+</html>
