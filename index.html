@@ -35,6 +35,10 @@ th { text-align:left; padding:0 12px 8px; color:var(--muted); font-size:11px; te
 td { padding:12px; border-bottom:1px solid var(--border); }
 td:first-child { font-weight:700; }
 a { color:var(--accent); font-weight:700; }
+.avance { display:inline-block; padding:3px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+.avance-full { background:#dcebe7; color:#0e5f57; }
+.avance-mid  { background:#fdf3e3; color:#7a4500; }
+.avance-none { background:#f1d6d6; color:#7a1f1f; }
 footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px solid var(--border); }
 @media (max-width:720px) { .steps { grid-template-columns:1fr 1fr; } h1 { font-size:22px; } }
 @media (max-width:480px) { .steps { grid-template-columns:1fr; } }
@@ -61,40 +65,40 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
             <section id="panel-RM" class="area-panel">
               <h2>RM</h2>
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Volumen CC</td><td><a href="https://docs.google.com/spreadsheets/d/1Wf18dCdgbRHwhXLJk5m9tWd4N2Jszt4R/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Volumen CR</td><td><a href="https://docs.google.com/spreadsheets/d/198pb6_REew1GKcmwftd89J-_uc-T29om/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Venta Neta</td><td><a href="https://docs.google.com/spreadsheets/d/12L8JRGl-_StwpjNnlA7gUY0YEWpm5HQ8/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Volumen CC</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1Wf18dCdgbRHwhXLJk5m9tWd4N2Jszt4R/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Volumen CR</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/198pb6_REew1GKcmwftd89J-_uc-T29om/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Venta Neta</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/12L8JRGl-_StwpjNnlA7gUY0YEWpm5HQ8/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
             <section id="panel-Costos" class="area-panel">
               <h2>Costos</h2>
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Costo de Insumos y Packging</td><td><a href="https://docs.google.com/spreadsheets/d/1E6PuKnqK4EnTC5ZKSVwQ2yU9MjKUE3H7/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Costo de Insumos y Packging</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1E6PuKnqK4EnTC5ZKSVwQ2yU9MjKUE3H7/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
             <section id="panel-Impuestos" class="area-panel">
               <h2>Impuestos</h2>
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Deudores Incobrables</td><td><a href="https://docs.google.com/spreadsheets/d/1KdldQSDVFZ9GaTtGlbRPPq5n83nOHJhX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C bancarios</td><td><a href="https://docs.google.com/spreadsheets/d/1f4L2hjp_0bVhIn-1X-DzhlClObK_SXwf/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><a href="https://docs.google.com/spreadsheets/d/1OtIH9PWuWrqFivOvhNPncDIWs1LPHhn6/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos brutos</td><td><a href="https://docs.google.com/spreadsheets/d/1a0vPAQ9DZjoo8cBFk8J57gBqzs6KNj2J/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><a href="https://docs.google.com/spreadsheets/d/1coUtahYeZeJMjKoF0mfw2qsxupGOsXcX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Deudores Incobrables</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1KdldQSDVFZ9GaTtGlbRPPq5n83nOHJhX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C bancarios</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1f4L2hjp_0bVhIn-1X-DzhlClObK_SXwf/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1OtIH9PWuWrqFivOvhNPncDIWs1LPHhn6/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos brutos</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1a0vPAQ9DZjoo8cBFk8J57gBqzs6KNj2J/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1coUtahYeZeJMjKoF0mfw2qsxupGOsXcX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
             <section id="panel-Produccion" class="area-panel">
               <h2>Produccion</h2>
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Desvio Standard</td><td><a href="https://docs.google.com/spreadsheets/d/17Ie-aVdwd_rFIZ5fgG6h80VfA6bMuLQH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Desvio Standard</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/17Ie-aVdwd_rFIZ5fgG6h80VfA6bMuLQH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
             <section id="panel-Logistica" class="area-panel">
               <h2>Logística</h2>
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Acuerdos Logisticos</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Directa</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Distribucion</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Interplanta</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Pallets</td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Acuerdos Logisticos</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Directa</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Distribucion</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Interplanta</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Pallets</td><td><span class="avance avance-mid" title="Último mes cargado: 202607">4/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             </div>
