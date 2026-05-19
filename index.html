@@ -39,6 +39,12 @@ a { color:var(--accent); font-weight:700; }
 .avance-full { background:#dcebe7; color:#0e5f57; }
 .avance-mid  { background:#fdf3e3; color:#7a4500; }
 .avance-none { background:#f1d6d6; color:#7a1f1f; }
+.muted-tag { color:var(--muted); font-style:italic; font-weight:600; }
+.report-section { margin:28px 0; padding:18px; border:1px solid var(--border); border-radius:8px; background:var(--surface); display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.report-section h3 { margin:0; font-size:16px; }
+.report-section p { margin:4px 0 0; color:var(--muted); font-size:13px; }
+.report-btn { background:var(--accent); color:white !important; padding:10px 22px; border-radius:6px; text-decoration:none; font-weight:700; }
+.report-btn.disabled { background:#bbb; pointer-events:none; }
 footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px solid var(--border); }
 @media (max-width:720px) { .steps { grid-template-columns:1fr 1fr; } h1 { font-size:22px; } }
 @media (max-width:480px) { .steps { grid-template-columns:1fr; } }
@@ -54,19 +60,35 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
   <p class="section-label">Instrucciones</p>
   <div class="steps">
     <div class="step"><div class="step-num">1</div><p>Seleccioná tu área y abrí cada archivo del concepto.</p></div>
-    <div class="step"><div class="step-num">2</div><p>Completá las columnas amarillas (Real Año N) mes a mes.</p></div>
+    <div class="step"><div class="step-num">2</div><p>Completá las columnas amarillas (Algoritmo) mes a mes.</p></div>
     <div class="step"><div class="step-num">3</div><p>No modifiques Año N-1, PAO ni los nombres de las líneas.</p></div>
     <div class="step"><div class="step-num">4</div><p>Los cambios se guardan automáticamente en Drive.</p></div>
   </div>
   <p class="section-label">Conceptos por área</p>
   <div class="files-box">
-    <div class="tabs-bar" id="tabs"><button class="tab-btn" data-area="RM" onclick="mostrarArea('RM')">RM</button><button class="tab-btn" data-area="Costos" onclick="mostrarArea('Costos')">Costos</button><button class="tab-btn" data-area="Impuestos" onclick="mostrarArea('Impuestos')">Impuestos</button><button class="tab-btn" data-area="Produccion" onclick="mostrarArea('Produccion')">Produccion</button><button class="tab-btn" data-area="Logistica" onclick="mostrarArea('Logistica')">Logística</button></div>
+    <div class="tabs-bar" id="tabs"><button class="tab-btn" data-area="RM" onclick="mostrarArea('RM')">RM</button><button class="tab-btn" data-area="Calculo_automatico" onclick="mostrarArea('Calculo_automatico')">Calculo automatico</button><button class="tab-btn" data-area="CdG" onclick="mostrarArea('CdG')">CdG</button><button class="tab-btn" data-area="Costos" onclick="mostrarArea('Costos')">Costos</button><button class="tab-btn" data-area="Almacen" onclick="mostrarArea('Almacen')">Almacen</button></div>
     <div class="area-panels" id="panels">
             <section id="panel-RM" class="area-panel">
               <h2>RM</h2>
               <table>
                 <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Volumen CC</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1Wf18dCdgbRHwhXLJk5m9tWd4N2Jszt4R/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Volumen CR</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/198pb6_REew1GKcmwftd89J-_uc-T29om/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Venta Neta</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/12L8JRGl-_StwpjNnlA7gUY0YEWpm5HQ8/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <tbody><tr><td>Volumen Total CR</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1PQNjn7ohKvqhaexTgOeJOySL5fqPNSFA/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Volumen Total</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/15_kI_UOXAuWAhhkQx8_UGppMP4ibvucH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Venta Neta</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/12L8JRGl-_StwpjNnlA7gUY0YEWpm5HQ8/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+              </table>
+            </section>
+            
+            <section id="panel-Calculo_automatico" class="area-panel">
+              <h2>Calculo automatico</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Flete Directa Tradicional</td><td><span class="avance avance-none" title="">0/12</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Fletes Distribución</td><td><span class="avance avance-none" title="">0/12</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Fletes Interplanta</td><td><span class="avance avance-none" title="">0/12</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Pallets</td><td><span class="avance avance-none" title="">0/12</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Costo de Insumos y Packaging</td><td><span class="avance avance-none" title="">0/12</span></td><td><span class="muted-tag">cálculo automático</span></td></tr></tbody>
+              </table>
+            </section>
+            
+            <section id="panel-CdG" class="area-panel">
+              <h2>CdG</h2>
+              <table>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Deudores Incobrables</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1KdldQSDVFZ9GaTtGlbRPPq5n83nOHJhX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C Bancario</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1G9U_0LWVM07oBpmMmxR347Xvw4X-K7sl/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1OtIH9PWuWrqFivOvhNPncDIWs1LPHhn6/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos Brutos</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1-mIvPT74Se2au8rEhczOn2EB1fKVQagg/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1coUtahYeZeJMjKoF0mfw2qsxupGOsXcX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Acuerdos Logisticos</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1kiBAoDbMqFMmpUmAB1wVehISp7lGZJH6/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Desvio Standard</td><td><span class="avance avance-none" title="">0/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/17Ie-aVdwd_rFIZ5fgG6h80VfA6bMuLQH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
@@ -74,34 +96,27 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>Costos</h2>
               <table>
                 <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Costo de Insumos y Packging</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1E6PuKnqK4EnTC5ZKSVwQ2yU9MjKUE3H7/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <tbody><tr><td>Costo de Insumos y Packaging UN</td><td><span class="avance avance-none">Sin datos</span></td><td><a href="https://docs.google.com/spreadsheets/d/1ueOKp2_bgu06CPGY5Wjf5ojif3S-hVCH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
-            <section id="panel-Impuestos" class="area-panel">
-              <h2>Impuestos</h2>
+            <section id="panel-Almacen" class="area-panel">
+              <h2>Almacen</h2>
               <table>
                 <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Deudores Incobrables</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1KdldQSDVFZ9GaTtGlbRPPq5n83nOHJhX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C bancarios</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1f4L2hjp_0bVhIn-1X-DzhlClObK_SXwf/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1OtIH9PWuWrqFivOvhNPncDIWs1LPHhn6/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos brutos</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1a0vPAQ9DZjoo8cBFk8J57gBqzs6KNj2J/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1coUtahYeZeJMjKoF0mfw2qsxupGOsXcX/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
-              </table>
-            </section>
-            
-            <section id="panel-Produccion" class="area-panel">
-              <h2>Produccion</h2>
-              <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Desvio Standard</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/17Ie-aVdwd_rFIZ5fgG6h80VfA6bMuLQH/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
-              </table>
-            </section>
-            
-            <section id="panel-Logistica" class="area-panel">
-              <h2>Logística</h2>
-              <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Acuerdos Logisticos</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Directa</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Distribucion</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete Interplanta</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Pallets</td><td><span class="avance avance-mid" title="Último mes cargado: 202606">3/12</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Flete de insumos</td><td><span class="avance avance-none">Sin datos</span></td><td><a href="https://docs.google.com/spreadsheets/d/1yJwLnn3MEmK3xfHjCXdJ0qGYenjuoxiZ/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <tbody><tr><td>Flete de Insumos</td><td><span class="avance avance-none">Sin datos</span></td><td><a href="https://docs.google.com/spreadsheets/d/1aWdjopd8WX5Nmnpl2RHRC6KuAXNbsk0t/edit?usp=drivesdk&amp;ouid=106993047156078358473&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             </div>
+  </div>
+
+  <p class="section-label" style="margin-top:28px">Ver reporte de resultados</p>
+  <div class="report-section">
+    <div>
+      <h3>Power BI — Resultados consolidados</h3>
+      <p>El reporte estará disponible próximamente.</p>
+    </div>
+    <span class="report-btn disabled">Próximamente</span>
   </div>
 </main>
 <footer>Consultas: <a href="mailto:Sebastian.Massolo@grupocepas.com">Sebastian.Massolo@grupocepas.com</a></footer>
