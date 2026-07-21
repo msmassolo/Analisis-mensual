@@ -40,8 +40,12 @@ a { color:var(--accent); font-weight:700; }
 .avance-mid  { background:#fdf3e3; color:#7a4500; }
 .avance-none { background:#f1d6d6; color:#7a1f1f; }
 .muted-tag { color:var(--muted); font-style:italic; font-weight:600; }
+.proy { display:inline-block; padding:3px 9px; border-radius:12px; font-size:12px;
+         font-weight:700; background:#e6ecf7; color:#24406e; cursor:help; }
 .aviso-alta { margin:0 0 16px; padding:13px 15px; border:1px solid var(--warn-border); border-left:4px solid var(--warn); border-radius:8px; background:var(--warn-soft); color:var(--warn); font-size:13px; line-height:1.5; }
 .aviso-alta a { color:var(--warn); text-decoration:underline; }
+.aviso-planas { margin:0 0 16px; padding:13px 15px; border:1px solid #d8c2c2; border-left:4px solid #a33; border-radius:8px; background:#fbf0f0; color:#7a1f1f; font-size:13px; line-height:1.5; }
+.aviso-planas ul { margin:8px 0 0; padding-left:20px; }
 .report-section { margin:28px 0; padding:18px; border:1px solid var(--border); border-radius:8px; background:var(--surface); display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
 .report-section h3 { margin:0; font-size:16px; }
 .report-section p { margin:4px 0 0; color:var(--muted); font-size:13px; }
@@ -74,8 +78,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>Calculo automatico</h2>
               
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Volumen CR</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Venta Neta</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Flete Directa Tradicional</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Fletes Distribución</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Fletes Interplanta</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Pallets</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Costo de Insumos y Packaging</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Volumen CR</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Venta Neta</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Flete Directa Tradicional</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Fletes Distribución</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Fletes Interplanta</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Pallets</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr><tr><td>Costo de Insumos y Packaging</td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">—</span></td><td><span class="muted-tag">cálculo automático</span></td></tr></tbody>
               </table>
             </section>
             
@@ -83,8 +87,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>DP</h2>
               <div class="aviso-alta"><b>¿Necesitás cargar un SKU/producto nuevo que no aparece en la base?</b><br>Las bases no permiten agregar filas. Enviá un mail a <a href="mailto:Sebastian.Massolo@grupocepas.com&subject=Alta%20de%20SKU%20nuevo">Sebastian.Massolo@grupocepas.com</a> con las especificaciones para darlo de alta en el maestro: <b>SKU, Material, Línea RM, Negocio, Factor de conversión CC→CR y Peso x CC</b>.</div>
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Volumen CC</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">6/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQByeRq7zKx4SKeuubQTnO9iAfYUKxq581MCmLDPoS6w2m4" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Volumen CC</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">6/12</span></td><td><span class="proy" title="El sistema estima 6 mes(es) a partir de Octubre, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Octubre</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQByeRq7zKx4SKeuubQTnO9iAfYUKxq581MCmLDPoS6w2m4" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
@@ -92,8 +96,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>CdG</h2>
               
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Deudores Incobrables</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQDuukB_7L9lTbNPcXAU8yBAAR1djZT5O2iA2cv-KWued-E" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C Bancario</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQBtpPin48IqR5_AGCcNPtOQAbwwmUz0ByrbEDYsKKjnJU4" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQDYT0L6i3JbS5lXwfXwh_c2ASFu7uCLXYP9_0J4zD1UfbQ" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos Brutos</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQADOXEhtEz9TIV0-q5SmMuzAfPjmQzjPbLRVaYGTsGDKwg" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQB88ypOgBMMQIYAkHGR5JgMAWwoe1JQ-8OJ1Kf0t3XU73k" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Acuerdos Logisticos</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQD4Mr0wR1T1Rrnet53SwGWTAQ7-fH47FUknvj1WC9xfBqY" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Desvio Standard</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQBQzwqDx6C4T7FUdrR5mT3ZAXva16tHPejGqfcfRe127Uk" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Deudores Incobrables</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQDuukB_7L9lTbNPcXAU8yBAAR1djZT5O2iA2cv-KWued-E" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>I D y C Bancario</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQBtpPin48IqR5_AGCcNPtOQAbwwmUz0ByrbEDYsKKjnJU4" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Impuestos Internos</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQDYT0L6i3JbS5lXwfXwh_c2ASFu7uCLXYP9_0J4zD1UfbQ" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Ingresos Brutos</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQADOXEhtEz9TIV0-q5SmMuzAfPjmQzjPbLRVaYGTsGDKwg" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Tasa de Seg e Higiene</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQB88ypOgBMMQIYAkHGR5JgMAWwoe1JQ-8OJ1Kf0t3XU73k" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Acuerdos Logisticos</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQD4Mr0wR1T1Rrnet53SwGWTAQ7-fH47FUknvj1WC9xfBqY" target="_blank" rel="noopener">Abrir archivo</a></td></tr><tr><td>Desvio Standard</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">4/12</span></td><td><span class="proy" title="El sistema estima 12 mes(es) a partir de Abril, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Abril</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQBQzwqDx6C4T7FUdrR5mT3ZAXva16tHPejGqfcfRe127Uk" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
@@ -101,8 +105,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>Costos</h2>
               
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Costo de Insumos y Packaging UN</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">6/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQArPPqge8maQqNnPojduSYQAUdjELdU0_gttCivj0UuaRg" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Costo de Insumos y Packaging UN</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">6/12</span></td><td><span class="proy" title="El sistema estima 6 mes(es) a partir de Octubre, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Octubre</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQArPPqge8maQqNnPojduSYQAUdjELdU0_gttCivj0UuaRg" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
@@ -110,8 +114,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>Almacen</h2>
               
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Flete de Insumos</td><td><span class="avance avance-mid" title="Último mes cargado: 202608">5/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQDugM6NgYvQSYAXJpUIox3HAfnE3EVZdPmhBzi9-D4tkh4" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Flete de Insumos</td><td><span class="avance avance-mid" title="Último mes cargado: 202608">5/12</span></td><td><span class="proy" title="El sistema estima 7 mes(es) a partir de Septiembre, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Septiembre</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQDugM6NgYvQSYAXJpUIox3HAfnE3EVZdPmhBzi9-D4tkh4" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
@@ -119,8 +123,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>RM</h2>
               
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Precio Neto</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">6/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQC_OH2OUD7yT6HCXH2GI5MSAej2XOweWegxWhMPOhRGmns" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Precio Neto</td><td><span class="avance avance-mid" title="Último mes cargado: 202609">6/12</span></td><td><span class="proy" title="El sistema estima 6 mes(es) a partir de Octubre, siguiendo la forma del PAO y el nivel de lo ya cargado.">estimado desde Octubre</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQC_OH2OUD7yT6HCXH2GI5MSAej2XOweWegxWhMPOhRGmns" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             
@@ -128,8 +132,8 @@ footer { color:var(--muted); font-size:12px; text-align:center; border-top:1px s
               <h2>CDG - Reales</h2>
               
               <table>
-                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Archivo</th></tr></thead>
-                <tbody><tr><td>Reales (todos los conceptos)</td><td><span class="avance avance-mid" title="Último mes cargado: Mayo">2/12</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQC4Fu6EcKh3SaFdwwAa4TlvAYXF7zxoufOHA-F5UGmCia4" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
+                <thead><tr><th>Concepto del P&amp;L</th><th>Avance</th><th>Proyección</th><th>Archivo</th></tr></thead>
+                <tbody><tr><td>Reales (todos los conceptos)</td><td><span class="avance avance-mid" title="Último mes cargado: Mayo">2/12</span></td><td><span class="muted-tag">—</span></td><td><a href="https://grupocepas.sharepoint.com/:x:/s/Algoritmo/IQC4Fu6EcKh3SaFdwwAa4TlvAYXF7zxoufOHA-F5UGmCia4" target="_blank" rel="noopener">Abrir archivo</a></td></tr></tbody>
               </table>
             </section>
             </div>
