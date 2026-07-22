@@ -6,7 +6,7 @@
 <title>P&amp;L Mensual 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:#f4f2ec; --surface:#fbfaf6; --surface2:#f0ede4; --text:#23211c; --muted:#6c675c;
@@ -18,11 +18,12 @@
 * { box-sizing:border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font-family:"Inter","Segoe UI",Arial,sans-serif; font-size:14px; -webkit-font-smoothing:antialiased; }
 header, main, footer { max-width:1000px; margin:0 auto; padding:0 24px; }
-header { padding-top:40px; padding-bottom:28px; position:relative; }
-header::before { content:""; position:absolute; left:24px; top:40px; width:3px; height:64px; background:var(--accent); border-radius:2px; }
-.eyebrow { margin:0 0 8px 18px; color:var(--accent); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.14em; }
-h1 { margin:0 0 16px 18px; font-family:"Newsreader","Georgia",serif; font-size:34px; font-weight:500; line-height:1.08; letter-spacing:-.01em; }
-.deadline { display:inline-flex; align-items:center; gap:7px; margin-left:18px; padding:7px 13px; border:1px solid var(--warn-border); border-radius:8px; background:var(--warn-soft); color:var(--warn); font-size:12px; font-weight:600; }
+header { padding-top:36px; padding-bottom:26px; border-bottom:1px solid var(--border); }
+.brand { display:flex; align-items:center; gap:16px; }
+.brand-logo { flex:none; display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:10px; background:var(--accent); color:#fff; font-weight:700; font-size:15px; letter-spacing:-.01em; }
+h1 { margin:0; font-size:20px; font-weight:600; line-height:1.2; letter-spacing:-.01em; color:var(--text); }
+.subtitle { margin:3px 0 0; color:var(--muted); font-size:13px; line-height:1.4; }
+.deadline { display:inline-flex; align-items:center; gap:7px; margin-top:18px; padding:7px 13px; border:1px solid var(--warn-border); border-radius:8px; background:var(--warn-soft); color:var(--warn); font-size:12px; font-weight:600; }
 .deadline::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--warn); }
 main { padding-bottom:20px; }
 .section-label { margin:34px 0 14px; color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
@@ -38,7 +39,7 @@ main { padding-bottom:20px; }
 .area-panels { padding:26px 24px; }
 .area-panel { display:none; }
 .area-panel.active { display:block; }
-h2 { margin:0 0 18px; font-family:"Newsreader","Georgia",serif; font-size:22px; font-weight:500; letter-spacing:-.005em; }
+h2 { margin:0 0 18px; font-size:17px; font-weight:600; letter-spacing:-.005em; }
 table { width:100%; border-collapse:collapse; }
 th { text-align:left; padding:0 12px 10px; color:var(--muted); font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; border-bottom:1px solid var(--border-strong); }
 td { padding:14px 12px; border-bottom:1px solid var(--border); font-size:13.5px; color:var(--muted); }
@@ -59,20 +60,25 @@ a:hover { text-decoration:underline; }
 .aviso-planas { margin:0 0 18px; padding:15px 17px; border:1px solid #dcc4c4; border-left:3px solid #a33; border-radius:10px; background:#fbf0f0; color:#7a1f1f; font-size:13px; line-height:1.55; }
 .aviso-planas ul { margin:8px 0 0; padding-left:20px; }
 .report-section { margin:14px 0 8px; padding:22px 24px; border:1px solid var(--border); border-radius:14px; background:var(--surface); box-shadow:var(--shadow-sm); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
-.report-section h3 { margin:0; font-family:"Newsreader","Georgia",serif; font-size:19px; font-weight:500; }
+.report-section h3 { margin:0; font-size:16px; font-weight:600; }
 .report-section p { margin:5px 0 0; color:var(--muted); font-size:13px; }
 .report-btn { background:var(--accent); color:white !important; padding:11px 24px; border-radius:9px; text-decoration:none; font-weight:600; font-size:13.5px; transition:opacity .18s ease; }
 .report-btn:hover { opacity:.9; text-decoration:none; }
 .report-btn.disabled { background:var(--border-strong); pointer-events:none; }
 footer { margin-top:20px; padding:24px; color:var(--muted); font-size:12.5px; text-align:center; border-top:1px solid var(--border); }
-@media (max-width:720px) { .steps { grid-template-columns:1fr 1fr; } h1 { font-size:26px; } }
+@media (max-width:720px) { .steps { grid-template-columns:1fr 1fr; } }
 @media (max-width:480px) { .steps { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
 <header>
-  <p class="eyebrow">P&amp;L Mensual</p>
-  <h1>Seguimiento Mensual P&amp;L — Ejercicio 2026/2027</h1>
+  <div class="brand">
+    <div class="brand-logo">P&amp;L</div>
+    <div>
+      <h1>Seguimiento mensual de P&amp;L</h1>
+      <p class="subtitle">Control de Gestión &middot; Ejercicio fiscal 2026/2027 &middot; Carga de Forecast por área</p>
+    </div>
+  </div>
   <div class="deadline">Cada cierre mensual del ejercicio fiscal</div>
 </header>
 <main>
